@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day Trade Intelligence Console</title>
+  <link rel="stylesheet" href="/console/styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="hero">
+      <p class="eyebrow">Day Trade Intelligence</p>
+      <h1>Operator Console</h1>
+      <p class="lede">A lightweight built-in workspace for local operations, trade submission, readiness checks, portfolio views, and broker reconciliation.</p>
+
+      <div class="credentials credentials--login">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="trader, operator, or admin" />
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" />
+        <button id="loginButton">Login</button>
+        <button id="logoutButton" type="button">Logout</button>
+      </div>
+      <p class="hint">Default local users: `trader/trader123`, `operator/operator123`, `admin/admin123`.</p>
+
+      <div class="quick-actions">
+        <button data-action="load-overview">Refresh Overview</button>
+        <button data-action="load-orders">Load Orders</button>
+        <button data-action="load-runs">Load Strategy Runs</button>
+        <button data-action="load-reconciliation">Load Reconciliation History</button>
+        <button data-action="run-reconciliation">Run Paper Reconciliation</button>
+      </div>
+    </section>
+
+    <section class="summary-grid">
+      <article class="summary-card">
+        <span class="summary-label">Readiness</span>
+        <strong id="readinessValue">Unknown</strong>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Positions</span>
+        <strong id="positionsCount">0</strong>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Portfolio Source</span>
+        <strong id="portfolioSource">Unknown</strong>
+      </article>
+      <article class="summary-card">
+        <span class="summary-label">Reconciliation Runs</span>
+        <strong id="reconciliationCount">0</strong>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card card--wide">
+        <div class="card-header">
+          <h2>Trade Submission</h2>
+          <span class="badge">Trader</span>
+        </div>
+        <form id="tradeForm" class="trade-form">
+          <label>
+            Symbol
+            <input name="symbol" type="text" value="AAPL" />
+          </label>
+          <label>
+            Quantity
+            <input name="quantity" type="number" min="1" value="1" />
+          </label>
+          <label>
+            Short Window
+            <input name="short_window" type="number" min="2" value="5" />
+          </label>
+          <label>
+            Long Window
+            <input name="long_window" type="number" min="3" value="20" />
+          </label>
+          <label>
+            Timeframe
+            <input name="timeframe" type="text" value="1Min" />
+          </label>
+          <label class="checkbox">
+            <input name="dry_run" type="checkbox" checked />
+            Dry Run
+          </label>
+          <button type="submit">Submit Signal</button>
+        </form>
+        <pre id="tradeResultPanel" class="panel">Submit a signal to see the orchestration response.</pre>
+      </article>
+
+      <article class="card card--wide">
+        <div class="card-header">
+          <h2>System Overview</h2>
+          <span id="statusBadge" class="badge">Unknown</span>
+        </div>
+        <pre id="systemStatus" class="panel">Waiting for data...</pre>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h2>Positions</h2>
+        </div>
+        <pre id="positionsPanel" class="panel">Waiting for data...</pre>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h2>Portfolio Summary</h2>
+        </div>
+        <pre id="portfolioPanel" class="panel">Waiting for data...</pre>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h2>Orders</h2>
+        </div>
+        <pre id="ordersPanel" class="panel">Waiting for data...</pre>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h2>Strategy Runs</h2>
+        </div>
+        <pre id="strategyRunsPanel" class="panel">Waiting for data...</pre>
+      </article>
+
+      <article class="card card--wide">
+        <div class="card-header">
+          <h2>Reconciliation</h2>
+        </div>
+        <pre id="reconciliationPanel" class="panel">Waiting for data...</pre>
+      </article>
+    </section>
+  </main>
+
+  <script src="/console/app.js"></script>
+</body>
+</html>
