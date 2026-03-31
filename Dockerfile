@@ -1,4 +1,4 @@
-﻿# Production container for the FastAPI trading API and background workers.
+# Production container for the FastAPI trading API and background workers.
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -26,3 +26,4 @@ HEALTHCHECK --interval=30s --timeout=5s --retries=3 CMD python -c "from urllib.r
 
 ENTRYPOINT ["/app/scripts/container-entrypoint.sh"]
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+

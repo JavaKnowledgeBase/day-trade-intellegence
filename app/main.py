@@ -1,4 +1,4 @@
-﻿"""Application entrypoint for the trading control plane."""
+"""Application entrypoint for the trading control plane."""
 
 import logging
 from contextlib import asynccontextmanager
@@ -6,7 +6,11 @@ from contextlib import asynccontextmanager
 import nest_asyncio
 from fastapi import FastAPI
 
-nest_asyncio.apply()
+try:
+    nest_asyncio.apply()
+except ValueError:
+    # uvloop cannot be patched; continue with the active event loop.
+    pass
 
 from app.api.router import api_router
 from app.bootstrap import initialize_database_schema, seed_demo_data
@@ -31,7 +35,10 @@ async def application_lifespan(app: FastAPI):
         seeded = seed_demo_data(settings, session)
     finally:
         session.close()
-    logger.info("Application startup bootstrap completed", extra={"bootstrap_mode": bootstrap_mode, "seeded_demo_data": seeded})
+    logger.info(
+        "Application startup bootstrap completed",
+        extra={"bootstrap_mode": bootstrap_mode, "seeded_demo_data": seeded},
+    )
     yield
     logger.info("Application shutdown completed")
 
