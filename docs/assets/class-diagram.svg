@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200" viewBox="0 0 1700 1200" fill="none">
+  <rect width="1700" height="1200" fill="#F5F1E8"/>
+  <text x="70" y="70" font-family="Georgia, serif" font-size="38" fill="#1E2A24">Core Class Diagram</text>
+  <text x="70" y="105" font-family="Georgia, serif" font-size="18" fill="#68756F">Interview-focused view of the main service, repository, and integration classes</text>
+
+  <rect x="70" y="160" width="360" height="260" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="95" y="195" font-family="Georgia, serif" font-size="24" fill="#1E2A24">TradingOrchestrator</text>
+  <line x1="90" y1="210" x2="410" y2="210" stroke="#D8CDBD"/>
+  <text x="95" y="242" font-family="monospace" font-size="16" fill="#5B6B65">+ process_signal(request)</text>
+  <line x1="90" y1="258" x2="410" y2="258" stroke="#D8CDBD"/>
+  <text x="95" y="290" font-family="monospace" font-size="15" fill="#5B6B65">market_data_service</text>
+  <text x="95" y="316" font-family="monospace" font-size="15" fill="#5B6B65">strategy_engine</text>
+  <text x="95" y="342" font-family="monospace" font-size="15" fill="#5B6B65">risk_manager</text>
+  <text x="95" y="368" font-family="monospace" font-size="15" fill="#5B6B65">execution_service</text>
+  <text x="95" y="394" font-family="monospace" font-size="15" fill="#5B6B65">portfolio_service + repositories</text>
+
+  <rect x="520" y="140" width="290" height="150" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="545" y="175" font-family="Georgia, serif" font-size="22" fill="#1E2A24">MarketDataService</text>
+  <line x1="540" y1="190" x2="790" y2="190" stroke="#D8CDBD"/>
+  <text x="545" y="222" font-family="monospace" font-size="15" fill="#5B6B65">+ get_recent_bars()</text>
+  <text x="545" y="248" font-family="monospace" font-size="15" fill="#5B6B65">+ _build_synthetic_bars()</text>
+
+  <rect x="520" y="320" width="290" height="120" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="545" y="355" font-family="Georgia, serif" font-size="22" fill="#1E2A24">StrategyEngine</text>
+  <line x1="540" y1="370" x2="790" y2="370" stroke="#D8CDBD"/>
+  <text x="545" y="402" font-family="monospace" font-size="15" fill="#5B6B65">+ evaluate_moving_average_crossover()</text>
+
+  <rect x="520" y="470" width="290" height="120" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="545" y="505" font-family="Georgia, serif" font-size="22" fill="#1E2A24">RiskManager</text>
+  <line x1="540" y1="520" x2="790" y2="520" stroke="#D8CDBD"/>
+  <text x="545" y="552" font-family="monospace" font-size="15" fill="#5B6B65">+ validate_trade()</text>
+
+  <rect x="520" y="620" width="290" height="120" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="545" y="655" font-family="Georgia, serif" font-size="22" fill="#1E2A24">ExecutionService</text>
+  <line x1="540" y1="670" x2="790" y2="670" stroke="#D8CDBD"/>
+  <text x="545" y="702" font-family="monospace" font-size="15" fill="#5B6B65">+ execute_order()</text>
+
+  <rect x="520" y="770" width="290" height="150" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="545" y="805" font-family="Georgia, serif" font-size="22" fill="#1E2A24">PortfolioService</text>
+  <line x1="540" y1="820" x2="790" y2="820" stroke="#D8CDBD"/>
+  <text x="545" y="852" font-family="monospace" font-size="15" fill="#5B6B65">+ get_portfolio_snapshot()</text>
+  <text x="545" y="878" font-family="monospace" font-size="15" fill="#5B6B65">+ _build_paper_snapshot()</text>
+  <text x="545" y="904" font-family="monospace" font-size="15" fill="#5B6B65">+ _build_live_snapshot()</text>
+
+  <rect x="930" y="180" width="320" height="180" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="955" y="215" font-family="Georgia, serif" font-size="22" fill="#1E2A24">TradingQueryService</text>
+  <line x1="950" y1="230" x2="1230" y2="230" stroke="#D8CDBD"/>
+  <text x="955" y="262" font-family="monospace" font-size="15" fill="#5B6B65">+ list_trade_orders()</text>
+  <text x="955" y="288" font-family="monospace" font-size="15" fill="#5B6B65">+ list_positions()</text>
+  <text x="955" y="314" font-family="monospace" font-size="15" fill="#5B6B65">+ list_strategy_runs()</text>
+  <text x="955" y="340" font-family="monospace" font-size="15" fill="#5B6B65">+ list_reconciliation_runs()</text>
+
+  <rect x="930" y="430" width="320" height="170" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="955" y="465" font-family="Georgia, serif" font-size="22" fill="#1E2A24">ReconciliationService</text>
+  <line x1="950" y1="480" x2="1230" y2="480" stroke="#D8CDBD"/>
+  <text x="955" y="512" font-family="monospace" font-size="15" fill="#5B6B65">+ reconcile_positions()</text>
+  <text x="955" y="538" font-family="monospace" font-size="15" fill="#5B6B65">+ _compare_positions()</text>
+  <text x="955" y="570" font-family="monospace" font-size="15" fill="#5B6B65">uses PortfolioService + QueryService</text>
+
+  <rect x="930" y="660" width="320" height="130" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="955" y="695" font-family="Georgia, serif" font-size="22" fill="#1E2A24">AuthService</text>
+  <line x1="950" y1="710" x2="1230" y2="710" stroke="#D8CDBD"/>
+  <text x="955" y="742" font-family="monospace" font-size="15" fill="#5B6B65">+ login()</text>
+  <text x="955" y="768" font-family="monospace" font-size="15" fill="#5B6B65">uses UserRepository + TokenManager</text>
+
+  <rect x="1330" y="150" width="300" height="320" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="1355" y="185" font-family="Georgia, serif" font-size="22" fill="#1E2A24">Repository Layer</text>
+  <line x1="1350" y1="200" x2="1610" y2="200" stroke="#D8CDBD"/>
+  <text x="1355" y="232" font-family="monospace" font-size="15" fill="#5B6B65">UserRepository</text>
+  <text x="1355" y="258" font-family="monospace" font-size="15" fill="#5B6B65">TradeOrderRepository</text>
+  <text x="1355" y="284" font-family="monospace" font-size="15" fill="#5B6B65">PositionRepository</text>
+  <text x="1355" y="310" font-family="monospace" font-size="15" fill="#5B6B65">StrategyRunRepository</text>
+  <text x="1355" y="336" font-family="monospace" font-size="15" fill="#5B6B65">TradeAuditRepository</text>
+  <text x="1355" y="362" font-family="monospace" font-size="15" fill="#5B6B65">ReconciliationRepository</text>
+  <text x="1355" y="402" font-family="monospace" font-size="15" fill="#5B6B65">All wrap SQLAlchemy session access</text>
+
+  <rect x="1330" y="560" width="300" height="180" rx="18" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="1355" y="595" font-family="Georgia, serif" font-size="22" fill="#1E2A24">Infrastructure Classes</text>
+  <line x1="1350" y1="610" x2="1610" y2="610" stroke="#D8CDBD"/>
+  <text x="1355" y="642" font-family="monospace" font-size="15" fill="#5B6B65">Settings</text>
+  <text x="1355" y="668" font-family="monospace" font-size="15" fill="#5B6B65">SessionLocal / Base / engine</text>
+  <text x="1355" y="694" font-family="monospace" font-size="15" fill="#5B6B65">RequestContextMiddleware</text>
+  <text x="1355" y="720" font-family="monospace" font-size="15" fill="#5B6B65">TokenManager / PasswordManager</text>
+
+  <path d="M430 280H520" stroke="#0F766E" stroke-width="3"/>
+  <path d="M430 300L520 380" stroke="#0F766E" stroke-width="3"/>
+  <path d="M430 320L520 530" stroke="#0F766E" stroke-width="3"/>
+  <path d="M430 340L520 680" stroke="#0F766E" stroke-width="3"/>
+  <path d="M430 360L520 830" stroke="#0F766E" stroke-width="3"/>
+  <path d="M430 250L930 250" stroke="#0F766E" stroke-width="3"/>
+  <path d="M430 370L930 510" stroke="#0F766E" stroke-width="3"/>
+  <path d="M1090 360V430" stroke="#0F766E" stroke-width="3"/>
+  <path d="M1250 270H1330" stroke="#0F766E" stroke-width="3"/>
+  <path d="M1250 520H1330" stroke="#0F766E" stroke-width="3"/>
+  <path d="M1250 720H1330" stroke="#0F766E" stroke-width="3"/>
+
+  <text x="70" y="1130" font-family="Georgia, serif" font-size="18" fill="#5B4A3A">Key interview point: the design separates API endpoints from orchestration logic, orchestration from persistence, and live integrations from safe local fallbacks.</text>
+</svg>

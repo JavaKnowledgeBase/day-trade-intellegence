@@ -51,6 +51,7 @@ This repository turns the architecture described in the developer document into 
 ## User guide
 
 - Start with [docs/USER_GUIDE.md](docs/USER_GUIDE.md) for a step-by-step console walkthrough with annotated visuals.
+- Continue with [docs/ARCHITECTURE_INTERVIEW_GUIDE.md](docs/ARCHITECTURE_INTERVIEW_GUIDE.md) for interview-style architecture notes, a system diagram, and a class diagram.
 
 ## Default local users
 
@@ -69,4 +70,5 @@ This repository turns the architecture described in the developer document into 
 - If migrations are not enabled and `BOOTSTRAP_SCHEMA=true`, startup falls back to SQLAlchemy metadata creation.
 - Metadata bootstrap is intended mainly for local/development usage.
 - If `SEED_DEMO_DATA=true`, the app inserts demo trading data and local users when the database is empty.
+
 

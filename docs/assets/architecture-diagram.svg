@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" fill="none">
+  <rect width="1600" height="1100" fill="#F5F1E8"/>
+  <text x="70" y="70" font-family="Georgia, serif" font-size="38" fill="#1E2A24">Day Trade Intelligence Architecture</text>
+  <text x="70" y="105" font-family="Georgia, serif" font-size="18" fill="#68756F">Runtime view of the FastAPI app, service layer, persistence, workers, and external integrations</text>
+
+  <rect x="70" y="150" width="260" height="120" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="95" y="190" font-family="Georgia, serif" font-size="26" fill="#1E2A24">Client Layer</text>
+  <text x="95" y="225" font-family="Georgia, serif" font-size="18" fill="#5B6B65">Browser console</text>
+  <text x="95" y="252" font-family="Georgia, serif" font-size="18" fill="#5B6B65">Swagger / API callers</text>
+
+  <rect x="400" y="150" width="340" height="180" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="425" y="190" font-family="Georgia, serif" font-size="26" fill="#1E2A24">FastAPI Application</text>
+  <text x="425" y="225" font-family="Georgia, serif" font-size="18" fill="#5B6B65">app/main.py</text>
+  <text x="425" y="255" font-family="Georgia, serif" font-size="17" fill="#5B6B65">- lifespan startup</text>
+  <text x="425" y="282" font-family="Georgia, serif" font-size="17" fill="#5B6B65">- logging + error handlers</text>
+  <text x="425" y="309" font-family="Georgia, serif" font-size="17" fill="#5B6B65">- request context middleware</text>
+
+  <rect x="400" y="380" width="340" height="250" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="425" y="420" font-family="Georgia, serif" font-size="26" fill="#1E2A24">API / UI Routers</text>
+  <text x="425" y="455" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Health routes</text>
+  <text x="425" y="482" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Auth routes</text>
+  <text x="425" y="509" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Trading routes</text>
+  <text x="425" y="536" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Portfolio routes</text>
+  <text x="425" y="563" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Reconciliation routes</text>
+  <text x="425" y="590" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Admin routes</text>
+  <text x="425" y="617" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Console static file routes</text>
+
+  <rect x="820" y="150" width="340" height="330" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="845" y="190" font-family="Georgia, serif" font-size="26" fill="#1E2A24">Application Services</text>
+  <text x="845" y="225" font-family="Georgia, serif" font-size="17" fill="#5B6B65">TradingOrchestrator</text>
+  <text x="845" y="252" font-family="Georgia, serif" font-size="17" fill="#5B6B65">TradingQueryService</text>
+  <text x="845" y="279" font-family="Georgia, serif" font-size="17" fill="#5B6B65">ReconciliationService</text>
+  <text x="845" y="306" font-family="Georgia, serif" font-size="17" fill="#5B6B65">OperationalStatusService</text>
+  <text x="845" y="333" font-family="Georgia, serif" font-size="17" fill="#5B6B65">AuthService</text>
+  <text x="845" y="372" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Collaborators inside orchestration:</text>
+  <text x="875" y="399" font-family="Georgia, serif" font-size="16" fill="#5B6B65">MarketDataService</text>
+  <text x="875" y="423" font-family="Georgia, serif" font-size="16" fill="#5B6B65">StrategyEngine</text>
+  <text x="875" y="447" font-family="Georgia, serif" font-size="16" fill="#5B6B65">RiskManager</text>
+  <text x="875" y="471" font-family="Georgia, serif" font-size="16" fill="#5B6B65">ExecutionService</text>
+  <text x="875" y="495" font-family="Georgia, serif" font-size="16" fill="#5B6B65">PortfolioService</text>
+
+  <rect x="820" y="540" width="340" height="220" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="845" y="580" font-family="Georgia, serif" font-size="26" fill="#1E2A24">Repositories</text>
+  <text x="845" y="615" font-family="Georgia, serif" font-size="17" fill="#5B6B65">UserRepository</text>
+  <text x="845" y="642" font-family="Georgia, serif" font-size="17" fill="#5B6B65">TradeOrderRepository</text>
+  <text x="845" y="669" font-family="Georgia, serif" font-size="17" fill="#5B6B65">PositionRepository</text>
+  <text x="845" y="696" font-family="Georgia, serif" font-size="17" fill="#5B6B65">StrategyRunRepository</text>
+  <text x="845" y="723" font-family="Georgia, serif" font-size="17" fill="#5B6B65">TradeAuditRepository</text>
+  <text x="845" y="750" font-family="Georgia, serif" font-size="17" fill="#5B6B65">ReconciliationRepository</text>
+
+  <rect x="1240" y="150" width="280" height="240" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="1265" y="190" font-family="Georgia, serif" font-size="26" fill="#1E2A24">Persistence</text>
+  <text x="1265" y="225" font-family="Georgia, serif" font-size="17" fill="#5B6B65">SQLAlchemy session</text>
+  <text x="1265" y="252" font-family="Georgia, serif" font-size="17" fill="#5B6B65">ORM models</text>
+  <text x="1265" y="279" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Alembic migrations</text>
+  <text x="1265" y="306" font-family="Georgia, serif" font-size="17" fill="#5B6B65">SQLite for local runs</text>
+  <text x="1265" y="333" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Postgres in Docker</text>
+
+  <rect x="1240" y="440" width="280" height="220" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="1265" y="480" font-family="Georgia, serif" font-size="26" fill="#1E2A24">Workers</text>
+  <text x="1265" y="515" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Celery app</text>
+  <text x="1265" y="542" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Reconciliation tasks</text>
+  <text x="1265" y="569" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Redis broker/backend</text>
+  <text x="1265" y="596" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Beat scheduler</text>
+
+  <rect x="1240" y="710" width="280" height="220" rx="20" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="1265" y="750" font-family="Georgia, serif" font-size="26" fill="#1E2A24">External Systems</text>
+  <text x="1265" y="785" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Alpaca market data</text>
+  <text x="1265" y="812" font-family="Georgia, serif" font-size="17" fill="#5B6B65">IBKR account state</text>
+  <text x="1265" y="839" font-family="Georgia, serif" font-size="17" fill="#5B6B65">IBKR order execution</text>
+  <text x="1265" y="878" font-family="Georgia, serif" font-size="17" fill="#5B6B65">Synthetic local fallbacks</text>
+
+  <path d="M330 210H400" stroke="#0F766E" stroke-width="4"/>
+  <path d="M570 330V380" stroke="#0F766E" stroke-width="4"/>
+  <path d="M740 260H820" stroke="#0F766E" stroke-width="4"/>
+  <path d="M990 480V540" stroke="#0F766E" stroke-width="4"/>
+  <path d="M1160 270H1240" stroke="#0F766E" stroke-width="4"/>
+  <path d="M1160 650H1240" stroke="#0F766E" stroke-width="4"/>
+  <path d="M1380 390V440" stroke="#0F766E" stroke-width="4"/>
+  <path d="M1380 660V710" stroke="#0F766E" stroke-width="4"/>
+
+  <text x="80" y="1010" font-family="Georgia, serif" font-size="18" fill="#5B4A3A">Primary runtime path: client -> FastAPI router -> service layer -> repositories -> database, with Redis/Celery for background reconciliation and Alpaca/IBKR for optional live integrations.</text>
+</svg>
