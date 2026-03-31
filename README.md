@@ -1,4 +1,4 @@
-﻿# Day Trade Intelligence
+# Day Trade Intelligence
 
 Enterprise-oriented trading platform scaffold that uses Alpaca for market data, IBKR for execution and live account state, FastAPI for control-plane APIs, Redis/Celery for background processing, PostgreSQL for durable operational state, and Alembic for schema migrations.
 
@@ -48,6 +48,10 @@ This repository turns the architecture described in the developer document into 
 8. Optionally start scheduler with `celery -A app.workers.celery_app.celery_app beat --loglevel=info`.
 9. Run tests with `pytest`.
 
+## User guide
+
+- Start with [docs/USER_GUIDE.md](docs/USER_GUIDE.md) for a step-by-step console walkthrough with annotated visuals.
+
 ## Default local users
 
 - Trader: `trader / trader123`
@@ -65,3 +69,4 @@ This repository turns the architecture described in the developer document into 
 - If migrations are not enabled and `BOOTSTRAP_SCHEMA=true`, startup falls back to SQLAlchemy metadata creation.
 - Metadata bootstrap is intended mainly for local/development usage.
 - If `SEED_DEMO_DATA=true`, the app inserts demo trading data and local users when the database is empty.
+

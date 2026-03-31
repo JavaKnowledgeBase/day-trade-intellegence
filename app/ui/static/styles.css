@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #f6f1e8;
   --panel: #fffaf0;
   --text: #1e2a24;
@@ -7,6 +7,8 @@
   --accent-strong: #134e4a;
   --line: #d8cdbd;
   --warn: #b45309;
+  --danger: #b91c1c;
+  --ok: #166534;
   --shadow: 0 20px 60px rgba(30, 42, 36, 0.08);
 }
 
@@ -91,6 +93,29 @@ button {
 
 button:hover {
   background: var(--accent-strong);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-status {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.login-status--success {
+  color: var(--ok);
+}
+
+.login-status--warn {
+  color: var(--warn);
+}
+
+.login-status--error {
+  color: var(--danger);
 }
 
 .quick-actions {

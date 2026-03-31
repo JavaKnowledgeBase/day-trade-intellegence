@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" fill="none">
+  <rect width="1400" height="980" fill="#F6F1E8"/>
+  <rect x="60" y="40" width="1280" height="900" rx="28" fill="#FFF9EF" stroke="#D8CDBD" stroke-width="2"/>
+  <text x="100" y="95" font-family="Georgia, serif" font-size="18" fill="#0F766E" letter-spacing="2">DAY TRADE INTELLIGENCE</text>
+  <text x="100" y="140" font-family="Georgia, serif" font-size="42" fill="#1E2A24">Operator Console</text>
+  <text x="100" y="178" font-family="Georgia, serif" font-size="20" fill="#68756F">Annotated layout of the built-in console</text>
+
+  <rect x="100" y="220" width="1180" height="145" rx="18" fill="#FFFFFF" stroke="#D8CDBD"/>
+  <rect x="130" y="270" width="240" height="48" rx="12" fill="#FFFFFF" stroke="#D8CDBD"/>
+  <rect x="390" y="270" width="240" height="48" rx="12" fill="#FFFFFF" stroke="#D8CDBD"/>
+  <rect x="650" y="270" width="110" height="48" rx="24" fill="#0F766E"/>
+  <rect x="780" y="270" width="110" height="48" rx="24" fill="#5B6B65"/>
+  <text x="132" y="258" font-family="Georgia, serif" font-size="14" fill="#68756F">1. Username</text>
+  <text x="392" y="258" font-family="Georgia, serif" font-size="14" fill="#68756F">2. Password</text>
+  <text x="683" y="300" font-family="Georgia, serif" font-size="16" fill="#FFFFFF">3. Login</text>
+  <text x="804" y="300" font-family="Georgia, serif" font-size="16" fill="#FFFFFF">4. Logout</text>
+  <text x="130" y="342" font-family="Georgia, serif" font-size="16" fill="#166534">5. Login status line: success, warning, or error shows here</text>
+
+  <rect x="100" y="390" width="1180" height="70" rx="18" fill="#FFFFFF" stroke="#D8CDBD"/>
+  <rect x="130" y="405" width="180" height="40" rx="20" fill="#0F766E"/>
+  <rect x="325" y="405" width="160" height="40" rx="20" fill="#0F766E"/>
+  <rect x="500" y="405" width="210" height="40" rx="20" fill="#0F766E"/>
+  <rect x="725" y="405" width="235" height="40" rx="20" fill="#0F766E"/>
+  <rect x="975" y="405" width="225" height="40" rx="20" fill="#0F766E"/>
+  <text x="144" y="430" font-family="Georgia, serif" font-size="14" fill="#FFFFFF">6. Refresh Overview</text>
+  <text x="357" y="430" font-family="Georgia, serif" font-size="14" fill="#FFFFFF">7. Orders</text>
+  <text x="524" y="430" font-family="Georgia, serif" font-size="14" fill="#FFFFFF">8. Strategy Runs</text>
+  <text x="748" y="430" font-family="Georgia, serif" font-size="14" fill="#FFFFFF">9. Reconciliation History</text>
+  <text x="995" y="430" font-family="Georgia, serif" font-size="14" fill="#FFFFFF">10. Run Paper Reconciliation</text>
+
+  <rect x="100" y="490" width="280" height="110" rx="20" fill="#FFFDF8" stroke="#D8CDBD"/>
+  <rect x="400" y="490" width="280" height="110" rx="20" fill="#FFFDF8" stroke="#D8CDBD"/>
+  <rect x="700" y="490" width="280" height="110" rx="20" fill="#FFFDF8" stroke="#D8CDBD"/>
+  <rect x="1000" y="490" width="280" height="110" rx="20" fill="#FFFDF8" stroke="#D8CDBD"/>
+  <text x="125" y="530" font-family="Georgia, serif" font-size="18" fill="#68756F">11. Readiness</text>
+  <text x="125" y="570" font-family="Georgia, serif" font-size="32" fill="#1E2A24">Ready</text>
+  <text x="425" y="530" font-family="Georgia, serif" font-size="18" fill="#68756F">12. Positions</text>
+  <text x="425" y="570" font-family="Georgia, serif" font-size="32" fill="#1E2A24">1</text>
+  <text x="725" y="530" font-family="Georgia, serif" font-size="18" fill="#68756F">13. Portfolio Source</text>
+  <text x="725" y="570" font-family="Georgia, serif" font-size="32" fill="#1E2A24">paper</text>
+  <text x="1025" y="530" font-family="Georgia, serif" font-size="18" fill="#68756F">14. Reconciliation Runs</text>
+  <text x="1025" y="570" font-family="Georgia, serif" font-size="32" fill="#1E2A24">9</text>
+
+  <rect x="100" y="630" width="580" height="250" rx="20" fill="#FFFDF8" stroke="#D8CDBD"/>
+  <rect x="710" y="630" width="570" height="250" rx="20" fill="#FFFDF8" stroke="#D8CDBD"/>
+  <text x="126" y="665" font-family="Georgia, serif" font-size="24" fill="#1E2A24">15. Trade Submission</text>
+  <text x="734" y="665" font-family="Georgia, serif" font-size="24" fill="#1E2A24">16. System Overview</text>
+  <rect x="125" y="690" width="530" height="170" rx="16" fill="#1F2937"/>
+  <rect x="735" y="690" width="520" height="170" rx="16" fill="#1F2937"/>
+  <text x="150" y="725" font-family="monospace" font-size="16" fill="#ECFEFF">Fill the trade form and submit a signal.</text>
+  <text x="150" y="752" font-family="monospace" font-size="16" fill="#ECFEFF">Response appears in the trade result panel.</text>
+  <text x="760" y="725" font-family="monospace" font-size="16" fill="#ECFEFF">Root info, readiness, current user,</text>
+  <text x="760" y="752" font-family="monospace" font-size="16" fill="#ECFEFF">and admin system status render here.</text>
+
+  <rect x="100" y="895" width="1180" height="26" rx="10" fill="#F3E9D8"/>
+  <text x="115" y="913" font-family="Georgia, serif" font-size="14" fill="#5B4A3A">Below the fold: Positions, Portfolio Summary, Orders, Strategy Runs, and Reconciliation output panels.</text>
+</svg>

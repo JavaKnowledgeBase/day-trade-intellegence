@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -18,9 +18,10 @@
         <input id="username" type="text" placeholder="trader, operator, or admin" />
         <label for="password">Password</label>
         <input id="password" type="password" placeholder="Enter password" />
-        <button id="loginButton">Login</button>
+        <button id="loginButton" type="button">Login</button>
         <button id="logoutButton" type="button">Logout</button>
       </div>
+      <p id="loginStatus" class="login-status">Not logged in.</p>
       <p class="hint">Default local users: `trader/trader123`, `operator/operator123`, `admin/admin123`.</p>
 
       <div class="quick-actions">
@@ -84,7 +85,7 @@
           </label>
           <button type="submit">Submit Signal</button>
         </form>
-        <pre id="tradeResultPanel" class="panel">Submit a signal to see the orchestration response.</pre>
+        <pre id="tradeResultPanel" class="panel">Log in to submit a signal.</pre>
       </article>
 
       <article class="card card--wide">
@@ -99,35 +100,35 @@
         <div class="card-header">
           <h2>Positions</h2>
         </div>
-        <pre id="positionsPanel" class="panel">Waiting for data...</pre>
+        <pre id="positionsPanel" class="panel">Log in to view positions.</pre>
       </article>
 
       <article class="card">
         <div class="card-header">
           <h2>Portfolio Summary</h2>
         </div>
-        <pre id="portfolioPanel" class="panel">Waiting for data...</pre>
+        <pre id="portfolioPanel" class="panel">Log in to view portfolio data.</pre>
       </article>
 
       <article class="card">
         <div class="card-header">
           <h2>Orders</h2>
         </div>
-        <pre id="ordersPanel" class="panel">Waiting for data...</pre>
+        <pre id="ordersPanel" class="panel">Log in to view orders.</pre>
       </article>
 
       <article class="card">
         <div class="card-header">
           <h2>Strategy Runs</h2>
         </div>
-        <pre id="strategyRunsPanel" class="panel">Waiting for data...</pre>
+        <pre id="strategyRunsPanel" class="panel">Log in to view strategy runs.</pre>
       </article>
 
       <article class="card card--wide">
         <div class="card-header">
           <h2>Reconciliation</h2>
         </div>
-        <pre id="reconciliationPanel" class="panel">Waiting for data...</pre>
+        <pre id="reconciliationPanel" class="panel">Log in to view reconciliation history.</pre>
       </article>
     </section>
   </main>
